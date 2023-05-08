@@ -1,5 +1,176 @@
-template-repository (1.0-1) unstable; urgency=medium
+libcrypt-passwdmd5-perl (1.42-2) unstable; urgency=medium
 
-  * Initial release
+  [ Debian Janitor ]
+  * Apply multi-arch hints. + libcrypt-passwdmd5-perl: Add Multi-Arch: foreign.
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Jelmer Vernooĳ <jelmer@debian.org>  Sun, 27 Nov 2022 13:48:30 +0000
+
+libcrypt-passwdmd5-perl (1.42-1) unstable; urgency=medium
+
+  * Team upload
+  * Import upstream version 1.42.
+  * Declare compliance with Debian Policy 4.6.1.
+
+ -- Leonardo Rodrigues Pereira <leontecnicalonline@gmail.com>  Sun, 17 Jul 2022 12:02:18 +0200
+
+libcrypt-passwdmd5-perl (1.41-1) unstable; urgency=medium
+
+  [ gregor herrmann ]
+  * debian/watch: use uscan version 4.
+
+  [ Debian Janitor ]
+  * Remove obsolete fields Contact, Name from debian/upstream/metadata
+    (already present in machine-readable debian/copyright).
+
+  [ Nick Morrott ]
+  * New upstream version 1.41
+  * d/control:
+    - Declare compliance with Debian Policy 4.5.1
+    - Bump debhelper compatibility level to 13
+    - Refresh Uploaders email address
+    - Add Rules-Requires-Root field, set to no
+  * d/copyright:
+    - Refresh years of Debian copyright and email address
+  * d/u/metadata:
+    - Update Bug-* and add Repository-* fields
+
+ -- Nick Morrott <nickm@debian.org>  Tue, 09 Feb 2021 19:32:05 +0000
+
+libcrypt-passwdmd5-perl (1.40-1) unstable; urgency=medium
+
+  * Take over for the Debian Perl Group, as agreed with Bart
+  * New upstream version 1.40
+  * d/control:
+    - Declare compliance with Debian Policy 4.3.0
+    - Bump debhelper comatibility level to 11
+    - Add Vcs-Git and Vcs-Browser fields
+    - Refresh (build-)dependencies
+    - Add autopkgtest support
+    - Update short/long descriptions
+  * d/copyright:
+    - replace with copyright details in 1.0 format
+  * d/docs:
+    - drop README
+  * d/patches:
+    - drop patches (applied upstream)
+  * d/rules:
+    - refresh with default dh target
+  * d/s/format:
+    - specify quilt format
+  * d/u/metadata:
+    - add upstream metadata
+  * d/watch:
+    - migrate to track metacpan releases
+
+ -- Nick Morrott <knowledgejunkie@gmail.com>  Fri, 22 Feb 2019 01:00:10 +0000
+
+libcrypt-passwdmd5-perl (1.3-10) unstable; urgency=low
+
+  * Switch to dpkg-source 3.0 (quilt) format.
+  * Fixed ancient-standards-version, debhelper-but-no-misc-depends,
+    homepage-for-cpan-package-contains-version.
+  * Debhelper 8, no longer cdbs.
+  * Moved existing changes to debian/patches.
+
+ -- Bart Martens <bartm@debian.org>  Tue, 30 Aug 2011 18:36:54 +0200
+
+libcrypt-passwdmd5-perl (1.3-9) unstable; urgency=low
+
+  * debian/control, debian/rules: Now using cdbs.
+
+ -- Bart Martens <bartm@debian.org>  Sat, 02 Feb 2008 15:07:56 +0100
+
+libcrypt-passwdmd5-perl (1.3-8) unstable; urgency=low
+
+  * debian/control: Changed my e-mail address.
+  * debian/copyright: Updated.
+  * debian/watch: Updated.
+  * debian/control: Standards version.
+
+ -- Bart Martens <bartm@knars.be>  Wed, 14 Jun 2006 06:54:59 +0200
+
+libcrypt-passwdmd5-perl (1.3-7) unstable; urgency=low
+
+  * New maintainer.  Closes: #360941.
+  * debian/copyright: Updated.
+  * PasswdMD5.pm: Fixed lintian manpage-has-errors-from-man.
+
+ -- Bart Martens <bart.martens@advalvas.be>  Sat,  8 Apr 2006 13:20:56 +0200
+
+libcrypt-passwdmd5-perl (1.3-6) unstable; urgency=low
+
+  * debian/rules: streamlining
+  * Upgrade Standards-Version and debhelper compatibility level
+
+ -- Florian Ernst <florian@debian.org>  Mon,  9 Jan 2006 15:59:13 +0100
+
+libcrypt-passwdmd5-perl (1.3-5) unstable; urgency=low
+
+  * fix salt generation now as upstream plans unrelated changes for
+    the next revision (Closes: #306293)
+
+ -- Florian Ernst <florian@debian.org>  Wed, 27 Apr 2005 20:47:29 +0200
+
+libcrypt-passwdmd5-perl (1.3-4) unstable; urgency=low
+
+  * debian/control:
+    - really fix override disparity
+
+ -- Florian Ernst <florian@debian.org>  Mon, 14 Feb 2005 01:53:13 +0100
+
+libcrypt-passwdmd5-perl (1.3-3) unstable; urgency=low
+
+  * debian/control:
+    - finally fix override disparity: section now listing perl
+    - adding CPAN as upstream "homepage" in Description:
+
+ -- Florian Ernst <florian@debian.org>  Mon, 14 Feb 2005 01:09:13 +0100
+
+libcrypt-passwdmd5-perl (1.3-2) unstable; urgency=low
+
+  * New maintainer address, many thanks to Frank Lichtenheld and Martin
+    Schulze for previous sponsoring
+  * debian/copyright: clarify actual copyright, thanks to Justin Pryzby
+    (Closes: #290095)
+
+ -- Florian Ernst <florian@debian.org>  Sun, 23 Jan 2005 16:27:13 +0100
+
+libcrypt-passwdmd5-perl (1.3-1) unstable; urgency=low
+
+  * New upstream release, new maintainer (Closes: #238580)
+  * debian/control:
+    + raised versioned B-D on perl and changed to B-D-I, thus
+      B-D on libdigest-md5-perl no longer needed -> removed
+    + raised versioned B-D on debhelper for dh_perl use
+    + B-D on zlib1g-dev not needed -> removed
+    + updated short and long description
+    + Standards-Version 3.6.1
+  * debian/copyright:
+    + additional license text, added pointer to perl license
+    + spelling fix
+  * debian/rules:
+    + DH_COMPAT moved into debian/compat
+    + general cleanup, including streamlining
+  * debian/watch: added
+
+ -- Florian Ernst <florian_ernst@gmx.net>  Wed, 29 Sep 2004 11:55:53 +0200
+
+libcrypt-passwdmd5-perl (1.2-3) unstable; urgency=low
+
+  * updated architecture to all.
+  * bumped standards version.
+  * fixed missing build depends on libdigest-md5-perl
+
+ -- Bart Bunting <bart@urnet.com.au>  Tue,  6 Nov 2001 16:28:31 +1100
+
+libcrypt-passwdmd5-perl (1.2-2) unstable; urgency=low
+
+  * Incorrect copyright file.
+
+ -- Bart Bunting <bart@urnet.com.au>  Sun, 21 Oct 2001 07:48:21 +1000
+
+libcrypt-passwdmd5-perl (1.2-1) unstable; urgency=low
+
+  * Initial Debianization.
+
+ -- bart bunting <bart@urnet.com.au>  Fri, 29 Jun 2001 15:31:05 +1000
